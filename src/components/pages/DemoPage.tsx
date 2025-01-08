@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import scrollToEvent from "../../module/common/scrollToEvent";
-import DashboardSection from "../sections/dashboard/DashboardSection";
-import DashboardSideMenu from "../sections/dashboard/DashboardSideMenu";
-import { AnalyzedMessage } from "../../@types/index.d";
-import axios from "axios";
-import { useLocation, useNavigate } from "react-router";
-import { useSelector } from "react-redux";
+import { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import scrollToEvent from '../../module/common/scrollToEvent';
+import DashboardSection from '../sections/dashboard/DashboardSection';
+import DashboardSideMenu from '../sections/dashboard/DashboardSideMenu';
+import { AnalyzedMessage } from '../../@types/index.d';
+import axios from 'axios';
+import { useLocation, useNavigate } from 'react-router';
+import { useSelector } from 'react-redux';
 
 const DashboardBox = styled.div`
   margin-top: 80px;
@@ -35,26 +35,27 @@ const DemoPage = () => {
   const demoChatRoomIndex = useRef<number>(0);
 
   const { pathname } = location;
-  const isDemoPage = pathname.includes("/demo");
+  const isDemoPage = pathname.includes('/demo');
 
   const isAnalyzedMessagesExist = useSelector(
-    (state: { isAnalyzedMessagesExistSlice: boolean }) => state.isAnalyzedMessagesExistSlice
+    (state: { isAnalyzedMessagesExistSlice: boolean }) =>
+      state.isAnalyzedMessagesExistSlice
   );
 
   // 분석된 메시지가 존재할 시 대시보드로 이동
   if (isAnalyzedMessagesExist && isDemoPage) {
-    navigate("/dashboard", { state: pathname });
+    navigate('/dashboard', { state: pathname });
   }
 
   useEffect(() => {
     (async () => {
-      const result = await axios.get("/api/dummy");
+      const result = await axios.get('/api/dummy');
       setDummyData([result.data.dummy.dummy]);
     })();
   }, []);
 
   useEffect(() => {
-    scrollToEvent(0, "auto");
+    scrollToEvent(0, 'auto');
   }, []);
 
   return (
