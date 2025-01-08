@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
-import styled, { css } from "styled-components";
-import { BsGithub, BsEnvelope } from "react-icons/bs";
-import Icon from "../../atoms/Icon";
-import Anchor from "../../atoms/Anchor";
-import { FlexCenterDiv, FlexColumnCenterDiv } from "../../atoms/FlexDiv";
-import Span from "../../atoms/Span";
-import { zIndex } from "../../../style/specifiedCss/zIndex";
+import { HTMLAttributes } from 'react';
+import styled, { css } from 'styled-components';
+import { BsGithub, BsEnvelope } from 'react-icons/bs';
+import Icon from '../../atoms/Icon';
+import Anchor from '../../atoms/Anchor';
+import { FlexCenterDiv, FlexColumnCenterDiv } from '../../atoms/FlexDiv';
+import Span from '../../atoms/Span';
+import { zIndex } from '../../../style/specifiedCss/zIndex';
 
 interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   dashboard?: boolean;
@@ -61,14 +61,14 @@ const ProjectName = styled(DeveloperNameSpan)`
 
 const DeveloperData = [
   {
-    github: "https://github.com/youngentry",
-    email: "mailto:gentry_@naver.com",
-    name: "youngentry",
+    github: 'https://github.com/youngentry',
+    email: 'mailto:gentry_@naver.com',
+    name: 'youngentry',
   },
   {
-    github: "https://github.com/juhee067",
-    email: "mailto:juhee067@gmail.com",
-    name: "juhee067",
+    github: 'https://github.com/juhee067',
+    email: 'mailto:juhee067@gmail.com',
+    name: 'juhee067',
   },
 ];
 

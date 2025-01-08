@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Outlet } from "react-router";
+import styled from 'styled-components';
+import { Outlet } from 'react-router';
 
 const UserPageContainer = styled.div`
   display: flex;
@@ -12,8 +12,6 @@ const UserPage = () => {
   return (
     <UserPageContainer>
       <Outlet />
-
-      {/* <WithdrawButton userData={userData} setUserData={setUserData} accessToken={accessToken} /> */}
     </UserPageContainer>
   );
 };
