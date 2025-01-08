@@ -48,10 +48,10 @@ const DemoPage = () => {
   }
 
   useEffect(() => {
-    (async () => {
-      const result = await axios.get('/api/dummy');
-      setDummyData([result.data.dummy.dummy]);
-    })();
+    // (async () => {
+    // const result = await axios.get('/api/dummy');
+    setDummyData([]);
+    // })();
   }, []);
 
   useEffect(() => {
