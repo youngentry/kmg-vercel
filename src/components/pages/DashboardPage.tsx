@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import scrollToEvent from "../../module/common/scrollToEvent";
-import DashboardSection from "../sections/dashboard/DashboardSection";
-import DashboardSideMenu from "../sections/dashboard/DashboardSideMenu";
-import { useSelector } from "react-redux";
-import { AnalyzedMessage } from "../../@types/index.d";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import scrollToEvent from '../../module/common/scrollToEvent';
+import DashboardSection from '../sections/dashboard/DashboardSection';
+import DashboardSideMenu from '../sections/dashboard/DashboardSideMenu';
+import { useSelector } from 'react-redux';
+import { AnalyzedMessage } from '../../@types/index.d';
 
 const DashboardBox = styled.div`
   margin-top: 80px;
@@ -27,14 +27,15 @@ const DashboardBox = styled.div`
 
 const DashboardPage = () => {
   const analyzedMessages = useSelector(
-    (state: { analyzedMessagesSlice: AnalyzedMessage[] }) => state.analyzedMessagesSlice
+    (state: { analyzedMessagesSlice: AnalyzedMessage[] }) =>
+      state.analyzedMessagesSlice
   );
   const selectedChatRoomIndex = useSelector(
     (state: { selectedRoomIndexSlice: number }) => state.selectedRoomIndexSlice
   );
 
   useEffect(() => {
-    scrollToEvent(0, "auto");
+    scrollToEvent(0, 'auto');
   }, []);
 
   return (

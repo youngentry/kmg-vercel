@@ -4,7 +4,6 @@ import scrollToEvent from '../../module/common/scrollToEvent';
 import DashboardSection from '../sections/dashboard/DashboardSection';
 import DashboardSideMenu from '../sections/dashboard/DashboardSideMenu';
 import { AnalyzedMessage } from '../../@types/index.d';
-import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 
@@ -48,11 +47,19 @@ const DemoPage = () => {
   }
 
   useEffect(() => {
-    // (async () => {
-    // const result = await axios.get('/api/dummy');
-    setDummyData([]);
-    // })();
-  }, []);
+    const fetchDummyData = async () => {
+      try {
+        const response = await fetch('/dummy.txt');
+        const textData = await response.text();
+        const jsonData = JSON.parse(textData);
+        setDummyData(jsonData);
+      } catch (error) {
+        console.error('Failed to fetch dummy data:', error);
+      }
+    };
+
+    fetchDummyData();
+  }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때만 실행
 
   useEffect(() => {
     scrollToEvent(0, 'auto');
