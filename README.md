@@ -30,7 +30,7 @@
   
 ## 사이트 URL
 
-- ### http://kmg-env-1.eba-332qe2dv.ap-northeast-2.elasticbeanstalk.com/
+- ### [http://kmg-env-1.eba-332qe2dv.ap-northeast-2.elasticbeanstalk.com/](https://kmg-vercel-roelwifcy-youngentrys-projects.vercel.app/)
 
 
 
