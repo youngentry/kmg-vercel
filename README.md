@@ -30,7 +30,7 @@
   
 ## 사이트 URL
 
-- ### [https://kmg-vercel.vercel.app/](https://kmg-vercel.vercel.app/)
+- ### [https://kmg-vercel.vercel.app](https://kmg-vercel.vercel.app)
 
 
 
